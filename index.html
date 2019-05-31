@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title></title>
+</head>
+<body>
+	<div class="container">
+		<nav id="navbar">
+			<header>CSS Documentation</header>
+			<ul>
+				<a href="#flexbox" class="nav-link"><li>Flexbox</li></a>
+				<a href="#grid" class="nav-link"><li>CSS Grid</li></a>
+				<a href="#z-index" class="nav-link"><li>Z-Index</li></a>
+				<a href="#queries" class="nav-link"><li>Media Query</li></a>
+				<a href="#colors" class="nav-link"><li>Colors in CSS</li></a>
+			</ul>
+		</nav>
+		<main id="main-doc">
+			<section id="flexbox" class="main-section">
+				<header>
+					<h1>Flexbox</h1>
+				</header>
+				<p>CSS Flexible Box Layout is a module of CSS that defines a CSS box model optimized for user interface design, and the layout of items in one dimension. In the flex layout model, the children of a flex container can be laid out in any direction, and can “flex” their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent. Both horizontal and vertical alignment of the children can be easily manipulated.</p>
+				<h3>Syntax</h3>
+				<p>To define the flexbox layout you must use the <code>display</code> reference and its value set to <code>flex</code></p>
+				<code>
+					.contaier {
+						display: flex;
+					}
+				</code>
+				<h3>Flexbox references</h3>
+				<ul>
+					<li>align-content</li>
+					<li>align-items</li>
+					<li>justify-content</li>
+				</ul>
+			</section>
+
+			<section id="grid" class="main-section">
+				<header>
+					<h1>CSS Grid Layout</h1>
+				</header>
+				<p>CSS Grid Layout excels at dividing a page into major regions or defining the relationship in terms of size, position, and layer, between parts of a control built from HTML primitives.</p>
+				<p>Like tables, grid layout enables an author to align elements into columns and rows. However, many more layouts are either possible or easier with CSS grid than they were with tables. For example, a grid container's child elements could position themselves so they actually overlap and layer, similar to CSS positioned elements.</p>
+				<h3>Syntax</h3>
+				<p>To define the flexbox layout you must use the <code>display</code> reference and its value set to <code>grid</code></p>
+				<code>
+					.contaier {
+						display: grid;
+					}
+				</code>
+				<h3>Grid references</h3>
+				<ul>
+					<li>grid-template-columns</li>
+					<li>grid-template-rows</li>
+					<li>grid-column</li>
+					<li>grid-row</li>
+				</ul>
+			</section>
+			<section id="z_index" class="main-section">
+				<header>
+					<h1>Z-index</h1>
+				</header>
+				<p>The z-index CSS property sets the z-order of a positioned element and its descendants or flex items. Overlapping elements with a larger z-index cover those with a smaller one</p>
+				<p>To define the z-index property you must use the <code>z-index</code> reference and its value set to <code>keyword</code> or <code>integer</code></p>
+				<code>
+					.element {
+						z-index: auto | integer;
+					}
+				</code>
+				<h3>Value</h3>
+				<dl>
+					<dt>keyword | auto</dt>
+					<dd><p>The box does not establish a new local stacking context. The stack level of the generated box in the current stacking context is the same as its parent's box.</p></dd>
+					<dt><code>&ltinteger&gt</code></dt>
+					<dd><p>This <integer> is the stack level of the generated box in the current stacking context. The box also establishes a local stacking context in which its stack level is 0. This means that the z-indexes of descendants are not compared to the z-indexes of elements outside this element.</p></dd>
+				</dl>
+			</section>
+			<section id="queries" class="main-section">
+				<header>
+					<h1>Media Querie</h1>
+				</header>
+				<p>Media queries are useful when you want to modify your site or app depending on a device's general type (such as print vs. screen) or specific characteristics and parameters (such as screen resolution or browser viewport width).</p>
+				<p>Media queries are used for the following:</p>
+				<ul>
+					<li>To conditionally apply styles with the CSS @media and @import at-rules.</li>
+					<li>To target specific media for the <link>, <source>, and other HTML elements.</li>
+					<li>To test and monitor media states using the Window.matchMedia() and MediaQueryList.addListener() JavaScript methods.</li>
+				</ul>
+				<h3>Syntax</h3>
+				<code>
+					@media (max-width: 900) {
+						.element {
+							margin: 0;
+						}
+					}
+				</code>
+			</section>
+			<section id="colors" class="main-section">
+				<header>
+					<h1>Color</h1>
+				</header>
+				<p>The &ltcolor&gt CSS data type represents a color in the sRGB color space. A &ltcolor&gt may also include an alpha-channel transparency value, indicating how the color should composite with its background.</p>
+				<p>A &ltcolor&gt can be defined in any of the following ways</p>
+				<ul>
+					<li>Using a keyword (such as blue or transparent)</li>
+					<li>Using the RGB cubic-coordinate system (via the #-hexadecimal or the rgb() and rgba() functional notations)</li>
+					<li>Using the HSL cylindrical-coordinate system (via the hsl() and hsla() functional notations)</li>
+				</ul>
+				<code>
+					/* using background-color */ <br>
+						/* Hexadecimal */<br>
+					.element {background-color: #ffffff } <br>
+						/* RGB */ <br>
+					.element { background-color: rgb(255, 255, 255) } <br>
+						/* RGBA */ <br>
+					.element { background-color: rgba(255, 255, 255, 0.5) } <br>
+						/* HSL */ <br>
+					.element { background-color: hsl(270,60%,70%) } <br>
+						/* HSLA*/ <br>
+					.element { background-color: hsla(270,60%,70%, .15) } <br>
+				</code>
+			</section>
+		</main>
+	</div>
+</body>
+</html>
