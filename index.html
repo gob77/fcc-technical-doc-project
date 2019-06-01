@@ -6,26 +6,56 @@
 </head>
 <body>
 	<div class="container">
-		<nav id="navbar">
-			<header>CSS Documentation</header>
+		<nav id="navbar" class="navbar">
+			<header>
+				<h1>CSS Documentation</h1>
+			</header>
 			<ul>
-				<a href="#flexbox" class="nav-link"><li>Flexbox</li></a>
-				<a href="#grid" class="nav-link"><li>CSS Grid</li></a>
-				<a href="#z-index" class="nav-link"><li>Z-Index</li></a>
-				<a href="#queries" class="nav-link"><li>Media Query</li></a>
-				<a href="#colors" class="nav-link"><li>Colors in CSS</li></a>
+				<li><a href="#css" class="nav-link">CSS</a></li>
+				<li><a href="#flexbox" class="nav-link">Flexbox</a></li>
+				<li><a href="#grid" class="nav-link">CSS Grid</a></li>
+				<li><a href="#z_index" class="nav-link">Z-Index</a></li>
+				<li><a href="#queries" class="nav-link">Media Query</a></li>
+				<li><a href="#colors" class="nav-link">Colors in CSS</a></li>
+				<li><a href="#after" class="nav-link">After</a></li>
+				<li><a href="#transform" class="nav-link">Trasnform</a></li>
+				<li><a href="#box_shadow" class="nav-link">Box Shadow</a></li>
+				<li><a href="#line_height" class="nav-link">Line Height</a></li>
+				<li><a href="#max_width" class="nav-link">Max Width</a></li>
+				<li><a href="#transform" class="nav-link">Trasnform</a></li>
+				<li><a href="#transform" class="nav-link">Trasnform</a></li>
+				<li><a href="#transform" class="nav-link">Trasnform</a></li>
+				<li><a href="#transform" class="nav-link">Trasnform</a></li>
+				<li><a href="#transform" class="nav-link">Trasnform</a></li>
+				<li><a href="#transform" class="nav-link">Trasnform</a></li>
+				<li><a href="#transform" class="nav-link">Trasnform</a></li>
+				<li><a href="#transform" class="nav-link">Trasnform</a></li>
+				<li><a href="#transform" class="nav-link">Trasnform</a></li>
 			</ul>
 		</nav>
-		<main id="main-doc">
+		<main id="main-doc" class="main-doc">
+			<section id="css" class="main-section">
+				<header>
+					<h1>CSS</h1>
+				</header>
+				<p><strong>CSS</strong> (Cascading Style Sheets) is a declarative language that controls how webpages look in the browser. The browser applies CSS style declarations to selected elements to display them properly. A style declaration contains the properties and their values, which determine how a webpage looks.</p>
+				<p>CSS is one of the three core Web technologies, along with HTML and JavaScript. CSS usually styles HTML elements, but can be also used with other markup languages like SVG or XML.</p>
+				<p>A CSS rule is a set of properties associated with a selector. Here is an example that makes every HTML paragraph yellow against a black background:</p>
+				<h3>Syntax</h3>
+				<code>
+					/* first the selector (p) indicate that all paragraphs will be affected by the rule ({color: black}) */ <br>
+					p { color: black;}
+				</code>
+			</section>
 			<section id="flexbox" class="main-section">
 				<header>
 					<h1>Flexbox</h1>
 				</header>
 				<p>CSS Flexible Box Layout is a module of CSS that defines a CSS box model optimized for user interface design, and the layout of items in one dimension. In the flex layout model, the children of a flex container can be laid out in any direction, and can “flex” their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent. Both horizontal and vertical alignment of the children can be easily manipulated.</p>
 				<h3>Syntax</h3>
-				<p>To define the flexbox layout you must use the <code>display</code> reference and its value set to <code>flex</code></p>
+				<p>To define the flexbox layout you must use the display reference and its value set to flex</p>
 				<code>
-					.contaier {
+					.container {
 						display: flex;
 					}
 				</code>
@@ -44,9 +74,9 @@
 				<p>CSS Grid Layout excels at dividing a page into major regions or defining the relationship in terms of size, position, and layer, between parts of a control built from HTML primitives.</p>
 				<p>Like tables, grid layout enables an author to align elements into columns and rows. However, many more layouts are either possible or easier with CSS grid than they were with tables. For example, a grid container's child elements could position themselves so they actually overlap and layer, similar to CSS positioned elements.</p>
 				<h3>Syntax</h3>
-				<p>To define the flexbox layout you must use the <code>display</code> reference and its value set to <code>grid</code></p>
+				<p>To define the flexbox layout you must use the display reference and its value set to grid</p>
 				<code>
-					.contaier {
+					.container {
 						display: grid;
 					}
 				</code>
@@ -63,11 +93,10 @@
 					<h1>Z-index</h1>
 				</header>
 				<p>The z-index CSS property sets the z-order of a positioned element and its descendants or flex items. Overlapping elements with a larger z-index cover those with a smaller one</p>
-				<p>To define the z-index property you must use the <code>z-index</code> reference and its value set to <code>keyword</code> or <code>integer</code></p>
+				<p>To define the z-index property you must use the z-index  reference and its value set to keyword or integer </p>
+				
 				<code>
-					.element {
-						z-index: auto | integer;
-					}
+					.element {z-index: auto | integer;}
 				</code>
 				<h3>Value</h3>
 				<dl>
@@ -101,28 +130,134 @@
 				<header>
 					<h1>Color</h1>
 				</header>
-				<p>The &ltcolor&gt CSS data type represents a color in the sRGB color space. A &ltcolor&gt may also include an alpha-channel transparency value, indicating how the color should composite with its background.</p>
+				<p>The &ltcolor&gt CSS data type represents a color in the RGB color space. A &ltcolor&gt may also include an alpha-channel transparency value, indicating how the color should composite with its background.</p>
 				<p>A &ltcolor&gt can be defined in any of the following ways</p>
 				<ul>
 					<li>Using a keyword (such as blue or transparent)</li>
 					<li>Using the RGB cubic-coordinate system (via the #-hexadecimal or the rgb() and rgba() functional notations)</li>
 					<li>Using the HSL cylindrical-coordinate system (via the hsl() and hsla() functional notations)</li>
 				</ul>
+				<h3>Syntax</h3>
 				<code>
 					/* using background-color */ <br>
 						/* Hexadecimal */<br>
-					.element {background-color: #ffffff } <br>
+					.element {background-color: #ffffff;} <br>
 						/* RGB */ <br>
-					.element { background-color: rgb(255, 255, 255) } <br>
+					.element { background-color: rgb(255 255, 255);} <br>
 						/* RGBA */ <br>
-					.element { background-color: rgba(255, 255, 255, 0.5) } <br>
+					.element { background-color: rgba(255, 255, 255, 0.5);} <br>
 						/* HSL */ <br>
-					.element { background-color: hsl(270,60%,70%) } <br>
+					.element { background-color: hsl(270,60%,70%);} <br>
 						/* HSLA*/ <br>
-					.element { background-color: hsla(270,60%,70%, .15) } <br>
+					.element { background-color: hsla(270,60%,70%, .15);}
+				</code>
+			</section>
+			::after (:after)
+			<section id="after" class="main-section">
+				<header>
+					<h1>::after (:after)</h1>
+				</header>
+				<p>In CSS, ::after creates a pseudo-element that is the last child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default.</p>
+				<h3>Syntax</h3>
+				<code>
+					.element::after {content: "→";}
+				</code>
+			</section>
+			<section id="transform" class="main-section">
+				<header>
+					<h1>Transform</h1>
+				</header>
+				<p>The transform CSS property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS visual formatting model.</p>
+				<code>
+					.element {transform: matrix(1, 2, 3, 4, 5, 6);} <br>
+					.element {transform: translate(120px, 50%);} <br>
+					.element {transform: scale(2, 0.5);}<br>
+					.element {transform: rotate(0.5turn);}<br>
+					.element {transform: skew(30deg, 20deg);}<br>
+				</code>
+				<p>The transform property can have multiple function values</p>
+				<code>
+					.element {transform: scale(0.5) translate(-100%, -100%);}
+				</code>
+			</section>
+			<section id="box_shadow" class="main-section">
+				<header>
+					<h1>box-shadow</h1>
+				</header>
+				<p>The box-shadow CSS property adds shadow effects around an element's frame. You can set multiple effects separated by commas. A box shadow is described by X and Y offsets relative to the element, blur and spread radii, and color.</p>
+				<h3>Syntax</h3>
+				<code>
+					/* offset-x | offset-y | color */
+					<br>
+					.element {box-shadow: 60px -16px teal;}
+					<br>
+					/* offset-x | offset-y | blur-radius | color */
+					<br>
+					.element {box-shadow: 10px 5px 5px black;}
+					<br>
+					/* offset-x | offset-y | blur-radius | spread-radius | color */
+					<br>
+					.element {box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);}
+					<br>
+					/* inset | offset-x | offset-y | color */
+					<br>
+					.element {box-shadow: inset 5em 1em gold;}
+				</code>
+			</section>
+			<section id="line_height" class="main-section">
+				<header>
+					<h1>line-height</h1>
+				</header>
+				<p>The line-height CSS property sets the height of a line box. It's commonly used to set the distance between lines of text. On block-level elements, it specifies the minimum height of line boxes within the element. On non-replaced inline elements, it specifies the height that is used to calculate line box height</p>
+				<code>
+					/* Keyword value */
+					<br>
+					.element {line-height: normal;}
+					<br>
+					/* Unitless values: use this number multiplied
+					<br>
+					by the element's font size */
+					<br>
+					.element {line-height: 3.5;}
+					<br>
+					/* length values */
+					<br>
+					.element {line-height: 3em;}
+					<br>
+					/* percentage values */
+					<br>
+					.element {line-height: 34%;}
+				</code>
+			</section>
+			<section id="max_width" class="main-section">
+				<header>
+					<h1>max-width</h1>
+				</header>
+				<p>The max-width CSS property sets the maximum width of an element. It prevents the used value of the width property from becoming larger than the value specified by max-width</p>
+				<h3>Syntax</h3>
+				<code>
+					/* length value */
+					<br>
+					max-width: 3.5em;
+					<br>
+					/* percentage value */
+					<br>
+					max-width: 75%;
 				</code>
 			</section>
 		</main>
 	</div>
 </body>
 </html>
+
+
+
+<section id="" class="main-section">
+				<header>
+					<h1></h1>
+				</header>
+				<p></p>
+				<p></p>
+				<h3>Syntax</h3>
+				<code></code>
+			</section>
