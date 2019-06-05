@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link href="https://fonts.googleapis.com/css?family=Asap|Lato:700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<title></title>
 </head>
@@ -22,11 +23,11 @@
 				<li><a href="#box_shadow" class="nav-link">Box Shadow</a></li>
 				<li><a href="#line_height" class="nav-link">Line Height</a></li>
 				<li><a href="#max_width" class="nav-link">Max Width</a></li>
-				<li><a href="#transform" class="nav-link">Trasnform</a></li>
-				<li><a href="#transform" class="nav-link">Trasnform</a></li>
-				<li><a href="#transform" class="nav-link">Trasnform</a></li>
-				<li><a href="#transform" class="nav-link">Trasnform</a></li>
-				<li><a href="#transform" class="nav-link">Trasnform</a></li>
+				<li><a href="#calc" class="nav-link">calc()</a></li>
+				<li><a href="#position" class="nav-link">Position</a></li>
+				<li><a href="#keyframes" class="nav-link">Keyframes</a></li>
+				<li><a href="#overflow" class="nav-link">Overflow</a></li>
+				<li><a href="#text_transform" class="nav-link">Text-transform</a></li>
 				<li><a href="#transform" class="nav-link">Trasnform</a></li>
 				<li><a href="#transform" class="nav-link">Trasnform</a></li>
 				<li><a href="#transform" class="nav-link">Trasnform</a></li>
@@ -245,11 +246,180 @@
 					max-width: 75%;
 				</code>
 			</section>
+			<section id="calc" class="main-section">
+				<header>
+					<h1>calc()</h1>
+				</header>
+				<p>The calc() CSS function lets you perform calculations when specifying CSS property values. It can be used anywhere a length, frequency, angle, time, percentage, number, or integer is allowed.</p>
+				<h3>Syntax</h3>
+				<code>
+					.element {width: calc(100% - 80px);}
+				</code>
+				<p>The calc() function takes a single expression as its parameter, with the expression's result used as the value. The expression can be any simple expression combining the following operators, using standard operator precedence rules:</p>
+				<ul>
+					<li>+ Addition</li>
+					<li>- Subtraction</li>
+					<li>* Multiplication. At least one of the arguments must be a number.</li>
+					<li>/ Division. The right-hand side must be a number.</li>
+				</ul>
+			</section>
+			<section id="position" class="main-section">
+				<header>
+					<h1>Position</h1>
+				</header>
+				<p>The position CSS property sets how an element is positioned in a document. The top, right, bottom, and left properties determine the final location of positioned elements.</p>
+				<h3>Types of positioning</h3>
+				<ul>
+					<li>A positioned element is an element whose computed position value is either relative, absolute, fixed, or sticky. (In other words, it's anything except static.)</li>
+					<li>A relatively positioned element is an element whose computed position value is relative. The top and bottom properties specify the vertical offset from its normal position; the left and right properties specify the horizontal offset.</li>
+					<li>An absolutely positioned element is an element whose computed position value is absolute or fixed. The top, right, bottom, and left properties specify offsets from the edges of the element's containing block. (The containing block is the ancestor relative to which the element is positioned.) If the element has margins, they are added to the offset.</li>
+					<li>A stickily positioned element is an element whose computed position value is sticky. It's treated as relatively positioned until its containing block crosses a specified threshold (such as setting top to value other than auto) within its flow root (or the container it scrolls within), at which point it is treated as "stuck" until meeting the opposite edge of its containing block.</li>
+				</ul>
+				<h3>Syntax</h3>
+				<code>
+					.element {position: static | relative | absolute | sticky | fixed;}
+				</code>
+				<h3>Values</h3>
+				<ul>
+					<li>
+						<h4>static</h4>
+						<p>The element is positioned according to the normal flow of the document. The top, right, bottom, left, and z-index properties have no effect. This is the default value.</p>
+					</li>
+					<li>
+						<h4>Relative</h4>
+						<p>The element is positioned according to the normal flow of the document, and then offset relative to itself based on the values of top, right, bottom, and left. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were static.</p>
+					</li>
+					<li>
+						<h4>absolute</h4>
+						<p>The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the initial containing block. Its final position is determined by the values of top, right, bottom, and left.</p>
+					</li>
+					<li>
+						<h4>fixed</h4>
+						<p>The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial containing block established by the viewport, except when one of its ancestors has a transform, perspective, or filter property set to something other than none (see the CSS Transforms Spec), in which case that ancestor behaves as the containing block. (Note that there are browser inconsistencies with perspective and filter contributing to containing block formation.) Its final position is determined by the values of top, right, bottom, and left.</p>
+					</li>
+					<li>
+						<h4>sticky</h4>
+						<p>The element is positioned according to the normal flow of the document, and then offset relative to its nearest scrolling ancestor and containing block (nearest block-level ancestor), including table-related elements, based on the values of top, right, bottom, and left. The offset does not affect the position of any other elements.</p>
+					</li>
+				</ul>
+			</section>
+			<section id="keyframes" class="main-section">
+				<header>
+					<h1>@keyframes</h1>
+				</header>
+				<p>The @keyframes CSS at-rule controls the intermediate steps in a CSS animation sequence by defining styles for keyframes (or waypoints) along the animation sequence. This gives more control over the intermediate steps of the animation sequence than transitions.</p>
+				<h3>Syntax</h3>
+				<code>
+					@keyframes slidein {
+  						from {
+    							margin-left: 100%;
+    							width: 300%;
+  							}
+
+  						to {
+    							margin-left: 0%;
+    							width: 100%;
+  							}
+					}
+				</code>
+				<p>To use keyframes, create a @keyframes rule with a name that is then used by the animation-name property to match an animation to its keyframe declaration. Each @keyframes rule contains a style list of keyframe selectors, which specify percentages along the animation when the keyframe occurs, and a block containing the styles for that keyfram</p>
+			</section>
+			<section id="overflow" class="main-section">
+				<header>
+					<h1>Overflow</h1>
+				</header>
+				<p>The overflow shorthand CSS property sets what to do when an element's content is too big to fit in its block formatting context. It is a shorthand for overflow-x and overflow-y.</p>
+				<h3>Syntax</h3>
+				<code>
+					.element {overflow: visible | hidden | clip | scroll | auto;}
+				</code>
+				<h3>Values</h3>
+				<ul>
+					<li>
+						<h4>Visible</h4>
+						<p>Content is not clipped and may be rendered outside the padding bo</p>
+					</li>
+					<li>
+						<h4>hidden</h4>
+						<p>Content is clipped if necessary to fit the padding box. No scrollbars are provided, and no support for allowing the user to scroll (such as by dragging or using a scroll wheel) is allowed. The content can be scrolled programmatically (for example, by setting the value of a property such as offsetLeft), so the element is still a scroll container</p>
+					</li>
+					<li>
+						<h4>clip</h4>
+						<p>Like for hidden, the content is clipped to the element's padding box. The difference between clip and hidden is that the clip keyword also forbids all scrolling, including programmatic scrolling. The box is not a scroll container, and does not start a new formatting context. If you wish to start a new formatting context, you can use display: flow-root to do so.</p>
+					</li>
+					<li>
+						<h4>scroll</h4>
+						<p>Content is clipped if necessary to fit the padding box. Browsers always display scrollbars whether or not any content is actually clipped, preventing scrollbars from appearing or disappearing as content changes. Printers may still print overflowing content.</p>
+					</li>
+					<li>
+						<h4>auto</h4>
+						<p>Depends on the user agent. If content fits inside the padding box, it looks the same as visible, but still establishes a new block formatting context. Desktop browsers provide scrollbars if content overflows.</p>
+					</li>
+				</ul>
+			</section>
+			<section id="text_transform" class="main-section">
+				<header>
+					<h1>Text-trasnform</h1>
+				</header>
+				<p>The text-transform CSS property specifies how to capitalize an element's text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized. It also can help improve legibility for ruby.</p>
+				<p>The text-transform property takes into account language-specific case mapping rules such as the following:</p>
+				<ul>
+					<li>
+						<p>In Turkic languages, like Turkish (tr), Azerbaijani (az), Crimean Tatar (crh), Volga Tatar (tt), and Bashkir (ba), there are two kinds of i, with and without the dot, and two case pairings: i/İ and ı/I.</p>
+					</li>
+					<li>
+						<p>In German (de), the ß becomes SS in uppercase.</p>
+					</li>
+					<li>
+						<p>In Dutch (nl), the ij digraph becomes IJ, even with text-transform: capitalize, which only puts the first letter of a word in uppercas</p>
+					</li>
+					<li>
+						<p>In Greek (el), vowels lose their accent when the whole word is in uppercase (ά/Α), except for the disjunctive eta (ή/Ή). Also, diphthongs with an accent on the first vowel lose the accent and gain a diaeresis on the second vowel (άι/ΑΪ</p>
+					</li>
+					<li>
+						<p>In Greek (el), the lowercase sigma character has two forms: σ and ς. ς is used only when sigma terminates a word. When applying text-transform: lowercase to an uppercase sigma (Σ), the browser needs to choose the right lowercase form based on context.</p>
+					</li>
+					<li>
+						<p>in Irish (ga), certain prefixed letters remain in lowercase when the base initial is capitalized, so for example text-transform: uppercase will change ar aon tslí to AR AON tSLÍ and not, as one might expect, AR AON TSLÍ (Firefox only). In some cases, a hyphen is also removed upon uppercasing: an t-uisce transforms to AN tUISCE (and the hyphen is correctly reinserted by text-transform: lowercase).</p>
+					</li>
+				</ul>
+				<h3>Syntax</h3>
+				<code>
+					/* Keyword values */
+					text-transform: none;
+					text-transform: capitalize;
+					text-transform: uppercase;
+					text-transform: lowercase;
+					text-transform: full-width;
+					text-transform: full-size-kana;
+				</code>
+				<h3>Values</h3>
+				<ul>
+					<li>
+						<h4>capitalize</h4>
+						<p>Is a keyword that converts the first letter of each word to uppercase. Other characters remain unchanged (they retain their original case as written in the element's text</p>
+					</li>
+					<li>
+						<h4>uppercase</h4>
+						<p>Is a keyword that converts all characters to uppercase.</p>
+					</li>
+					<li>
+						<h4>lowercase</h4>
+						<p>Is a keyword that converts all characters to lowercase.</p>
+					</li>
+					<li>
+						<h4>none</h4>
+						<p>Is a keyword that prevents the case of all characters from being changed.</p>
+					</li>
+				</ul>
+			</section>
 		</main>
 	</div>
 </body>
 </html>
 
+
+<!--
 
 
 <section id="" class="main-section">
@@ -257,7 +427,9 @@
 					<h1></h1>
 				</header>
 				<p></p>
-				<p></p>
 				<h3>Syntax</h3>
-				<code></code>
+				<code>
+				</code>
 			</section>
+			
+-->
