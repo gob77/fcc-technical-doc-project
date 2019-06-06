@@ -9,33 +9,30 @@
 	<div class="container">
 		<nav id="navbar" class="navbar">
 			<header>
-				<h1>CSS Documentation</h1>
+				<h1 class="first-header">CSS Documentation</h1>
 			</header>
 			<ul>
 				<li><a href="#css" class="nav-link">CSS</a></li>
 				<li><a href="#flexbox" class="nav-link">Flexbox</a></li>
-				<li><a href="#grid" class="nav-link">CSS Grid</a></li>
-				<li><a href="#z_index" class="nav-link">Z-Index</a></li>
-				<li><a href="#queries" class="nav-link">Media Query</a></li>
-				<li><a href="#colors" class="nav-link">Colors in CSS</a></li>
-				<li><a href="#after" class="nav-link">After</a></li>
-				<li><a href="#transform" class="nav-link">Trasnform</a></li>
-				<li><a href="#box_shadow" class="nav-link">Box Shadow</a></li>
-				<li><a href="#line_height" class="nav-link">Line Height</a></li>
-				<li><a href="#max_width" class="nav-link">Max Width</a></li>
-				<li><a href="#calc" class="nav-link">calc()</a></li>
+				<li><a href="#CSS_grid_layout" class="nav-link">CSS Grid Layout</a></li>
+				<li><a href="#Z-index" class="nav-link">Z-Index</a></li>
+				<li><a href="#Media_Queries" class="nav-link">Media Queries</a></li>
+				<li><a href="#color" class="nav-link">Color</a></li>
+				<li><a href="#::after_(:after)" class="nav-link">::after (:after)</a></li>
+				<li><a href="#transform" class="nav-link">Transform</a></li>
+				<li><a href="#Box_Shadow" class="nav-link">Box Shadow</a></li>
+				<li><a href="#Line_Height" class="nav-link">Line Height</a></li>
+				<li><a href="#Max_Width" class="nav-link">Max Width</a></li>
+				<li><a href="#calc()" class="nav-link">calc()</a></li>
 				<li><a href="#position" class="nav-link">Position</a></li>
-				<li><a href="#keyframes" class="nav-link">Keyframes</a></li>
+				<li><a href="#@Keyframes" class="nav-link">@Keyframes</a></li>
 				<li><a href="#overflow" class="nav-link">Overflow</a></li>
-				<li><a href="#text_transform" class="nav-link">Text-transform</a></li>
-				<li><a href="#transform" class="nav-link">Trasnform</a></li>
-				<li><a href="#transform" class="nav-link">Trasnform</a></li>
-				<li><a href="#transform" class="nav-link">Trasnform</a></li>
-				<li><a href="#transform" class="nav-link">Trasnform</a></li>
+				<li><a href="#Text_Transform" class="nav-link">Text Transform</a></li>
+				<li><a href="#display" class="nav-link">Display</a></li>
 			</ul>
 		</nav>
 		<main id="main-doc" class="main-doc">
-			<section id="css" class="main-section">
+			<section class="main-section" id="css">
 				<header>
 					<h1>CSS</h1>
 				</header>
@@ -48,7 +45,7 @@
 					p { color: black;}
 				</code>
 			</section>
-			<section id="flexbox" class="main-section">
+			<section class="main-section" id="flexbox">
 				<header>
 					<h1>Flexbox</h1>
 				</header>
@@ -68,7 +65,7 @@
 				</ul>
 			</section>
 
-			<section id="grid" class="main-section">
+			<section class="main-section" id="CSS_grid_layout">
 				<header>
 					<h1>CSS Grid Layout</h1>
 				</header>
@@ -89,7 +86,7 @@
 					<li>grid-row</li>
 				</ul>
 			</section>
-			<section id="z_index" class="main-section">
+			<section class="main-section" id="Z-index">
 				<header>
 					<h1>Z-index</h1>
 				</header>
@@ -107,9 +104,9 @@
 					<dd><p>This <integer> is the stack level of the generated box in the current stacking context. The box also establishes a local stacking context in which its stack level is 0. This means that the z-indexes of descendants are not compared to the z-indexes of elements outside this element.</p></dd>
 				</dl>
 			</section>
-			<section id="queries" class="main-section">
+			<section class="main-section" id="Media_Queries">
 				<header>
-					<h1>Media Querie</h1>
+					<h1>Media Queries</h1>
 				</header>
 				<p>Media queries are useful when you want to modify your site or app depending on a device's general type (such as print vs. screen) or specific characteristics and parameters (such as screen resolution or browser viewport width).</p>
 				<p>Media queries are used for the following:</p>
@@ -127,7 +124,7 @@
 					}
 				</code>
 			</section>
-			<section id="colors" class="main-section">
+			<section class="main-section" id="color">
 				<header>
 					<h1>Color</h1>
 				</header>
@@ -154,7 +151,7 @@
 				</code>
 			</section>
 			::after (:after)
-			<section id="after" class="main-section">
+			<section class="main-section" id="::after_(:after)">
 				<header>
 					<h1>::after (:after)</h1>
 				</header>
@@ -164,7 +161,7 @@
 					.element::after {content: "→";}
 				</code>
 			</section>
-			<section id="transform" class="main-section">
+			<section class="main-section" id="transform">
 				<header>
 					<h1>Transform</h1>
 				</header>
@@ -181,9 +178,9 @@
 					.element {transform: scale(0.5) translate(-100%, -100%);}
 				</code>
 			</section>
-			<section id="box_shadow" class="main-section">
+			<section class="main-section" id="Box_Shadow">
 				<header>
-					<h1>box-shadow</h1>
+					<h1>Box Shadow</h1>
 				</header>
 				<p>The box-shadow CSS property adds shadow effects around an element's frame. You can set multiple effects separated by commas. A box shadow is described by X and Y offsets relative to the element, blur and spread radii, and color.</p>
 				<h3>Syntax</h3>
@@ -205,9 +202,9 @@
 					.element {box-shadow: inset 5em 1em gold;}
 				</code>
 			</section>
-			<section id="line_height" class="main-section">
+			<section class="main-section" id="Line_Height">
 				<header>
-					<h1>line-height</h1>
+					<h1>Line Height</h1>
 				</header>
 				<p>The line-height CSS property sets the height of a line box. It's commonly used to set the distance between lines of text. On block-level elements, it specifies the minimum height of line boxes within the element. On non-replaced inline elements, it specifies the height that is used to calculate line box height</p>
 				<code>
@@ -230,9 +227,9 @@
 					.element {line-height: 34%;}
 				</code>
 			</section>
-			<section id="max_width" class="main-section">
+			<section class="main-section" id="Max_Width">
 				<header>
-					<h1>max-width</h1>
+					<h1>Max Width</h1>
 				</header>
 				<p>The max-width CSS property sets the maximum width of an element. It prevents the used value of the width property from becoming larger than the value specified by max-width</p>
 				<h3>Syntax</h3>
@@ -246,7 +243,7 @@
 					max-width: 75%;
 				</code>
 			</section>
-			<section id="calc" class="main-section">
+			<section class="main-section" id="calc()">
 				<header>
 					<h1>calc()</h1>
 				</header>
@@ -263,7 +260,7 @@
 					<li>/ Division. The right-hand side must be a number.</li>
 				</ul>
 			</section>
-			<section id="position" class="main-section">
+			<section class="main-section" id="position">
 				<header>
 					<h1>Position</h1>
 				</header>
@@ -303,35 +300,40 @@
 					</li>
 				</ul>
 			</section>
-			<section id="keyframes" class="main-section">
+			<section class="main-section" id="@Keyframes">
 				<header>
 					<h1>@keyframes</h1>
 				</header>
 				<p>The @keyframes CSS at-rule controls the intermediate steps in a CSS animation sequence by defining styles for keyframes (or waypoints) along the animation sequence. This gives more control over the intermediate steps of the animation sequence than transitions.</p>
 				<h3>Syntax</h3>
 				<code>
-					@keyframes slidein {
+					@keyframes slidein {<br>
   						from {
     							margin-left: 100%;
     							width: 300%;
   							}
-
+							<br>
   						to {
     							margin-left: 0%;
     							width: 100%;
   							}
+  							<br>
 					}
 				</code>
 				<p>To use keyframes, create a @keyframes rule with a name that is then used by the animation-name property to match an animation to its keyframe declaration. Each @keyframes rule contains a style list of keyframe selectors, which specify percentages along the animation when the keyframe occurs, and a block containing the styles for that keyfram</p>
 			</section>
-			<section id="overflow" class="main-section">
+			<section class="main-section" id="overflow">
 				<header>
 					<h1>Overflow</h1>
 				</header>
 				<p>The overflow shorthand CSS property sets what to do when an element's content is too big to fit in its block formatting context. It is a shorthand for overflow-x and overflow-y.</p>
 				<h3>Syntax</h3>
 				<code>
-					.element {overflow: visible | hidden | clip | scroll | auto;}
+					.element {overflow: visible;} <br>
+					.element {overflow: hidden;} <br>
+					.element {overflow: clip;} <br>
+					.element {overflow: scroll;} <br>
+					.element {overflow: auto;} <br>
 				</code>
 				<h3>Values</h3>
 				<ul>
@@ -357,9 +359,9 @@
 					</li>
 				</ul>
 			</section>
-			<section id="text_transform" class="main-section">
+			<section class="main-section" id="Text_Transform">
 				<header>
-					<h1>Text-trasnform</h1>
+					<h1>Text Transform</h1>
 				</header>
 				<p>The text-transform CSS property specifies how to capitalize an element's text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized. It also can help improve legibility for ruby.</p>
 				<p>The text-transform property takes into account language-specific case mapping rules such as the following:</p>
@@ -386,12 +388,10 @@
 				<h3>Syntax</h3>
 				<code>
 					/* Keyword values */
-					text-transform: none;
-					text-transform: capitalize;
-					text-transform: uppercase;
-					text-transform: lowercase;
-					text-transform: full-width;
-					text-transform: full-size-kana;
+					.element {text-transform: none;} <br>
+					.element {text-transform: capitalize;} <br>
+					.element {text-transform: uppercase;} <br>
+					.element {text-transform: lowercase;} <br>
 				</code>
 				<h3>Values</h3>
 				<ul>
@@ -413,23 +413,20 @@
 					</li>
 				</ul>
 			</section>
+			<section class="main-section" id="display">
+				<header>
+					<h1>Display</h1>
+				</header>
+				<p>The display CSS property sets whether an element is treated as a block or inline element and the layout used for its children, such as grid or flex.</p>
+				<h3>Syntax</h3>
+				<code>
+					.element {display: block;} <br>
+					.element {display: inline;} <br>
+					.element {display: grid;} <br>
+					.element {display: flex;} <br>
+				</code>
+			</section>
 		</main>
 	</div>
 </body>
 </html>
-
-
-<!--
-
-
-<section id="" class="main-section">
-				<header>
-					<h1></h1>
-				</header>
-				<p></p>
-				<h3>Syntax</h3>
-				<code>
-				</code>
-			</section>
-			
--->
